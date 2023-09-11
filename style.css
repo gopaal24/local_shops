@@ -1,0 +1,11 @@
+html,
+body{
+    height: 100%;
+}
+
+.btn{
+    padding: 20px 0px;
+    margin: 15px;
+    display: block;
+    width: 50%;
+}

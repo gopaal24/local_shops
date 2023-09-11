@@ -1,0 +1,23 @@
+<?php
+        $host = "localhost";
+        $dbname = "local_shops";
+        $username = "root";
+        $password = "";
+
+        $conn = mysqli_connect($host, $username, $password, $dbname);
+        $id = 1;
+        $sql = "SELECT  first_name, last_name, mobile_num, license, shop_name, shop_type from details where id = $id";
+        $result = mysqli_query($conn, $sql);
+
+        $row = mysqli_fetch_assoc($result);
+
+        echo $row["first_name"]."<br>";
+        echo $row["last_name"]."<br>";
+        echo $row["mobile_num"]."<br>";
+        echo $row["license"]."<br>";
+        echo $row["shop_name"]."<br>";
+        echo $row["shop_type"]."<br>";
+        
+
+        $conn -> close();
+        ?>
